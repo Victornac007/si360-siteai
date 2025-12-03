@@ -1,10 +1,10 @@
 import React from 'react';
 import { Button } from './Button';
-import { Phone, MapPin, Mail, Hexagon } from 'lucide-react';
+import { Phone, MapPin, Mail, Hexagon, Linkedin, Twitter } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-navy-900 border-t-4 border-safety pt-20 pb-10 px-6">
+    <footer className="bg-navy-900 border-t-4 border-safety pt-20 pb-10 px-6" id="contacto">
       <div className="max-w-7xl mx-auto">
         
         {/* Top Section: CTA & Social Proof */}
@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
              <p className="text-metallic-300 mb-8">
                Hablemos de Ingeniería Aplicada. Agende una visita técnica sin costo para evaluar su infraestructura actual.
              </p>
-             <Button variant="primary">
+             <Button variant="primary" onClick={() => window.location.href = 'mailto:contacto@si360.cl'}>
                Contactar a un Ingeniero
              </Button>
           </div>
@@ -57,6 +57,10 @@ export const Footer: React.FC = () => {
                Soluciones Integrales 360 SpA.
                Santiago, Chile.
              </p>
+             <div className="flex gap-4 mt-4">
+               <Linkedin className="w-5 h-5 text-metallic-300 hover:text-white cursor-pointer" />
+               <Twitter className="w-5 h-5 text-metallic-300 hover:text-white cursor-pointer" />
+             </div>
           </div>
 
           <div className="col-span-1 md:col-span-1">
@@ -66,7 +70,7 @@ export const Footer: React.FC = () => {
                 <Phone className="w-4 h-4" /> +56 9 4250 1330
               </li>
               <li className="flex items-center gap-3 text-metallic-300 hover:text-safety transition-colors cursor-pointer">
-                <MapPin className="w-4 h-4" /> Providencia, Región Metropolitana
+                <MapPin className="w-4 h-4" /> Providencia, RM
               </li>
               <li className="flex items-center gap-3 text-metallic-300 hover:text-safety transition-colors cursor-pointer">
                 <Mail className="w-4 h-4" /> contacto@si360.cl
@@ -77,10 +81,10 @@ export const Footer: React.FC = () => {
           <div className="col-span-1 md:col-span-1">
              <h4 className="text-white font-bold mb-4 uppercase text-sm tracking-wider">Enlaces</h4>
              <ul className="space-y-2 text-metallic-300 text-sm">
-                <li className="hover:text-white cursor-pointer hover:translate-x-1 transition-transform">Servicios Industriales</li>
-                <li className="hover:text-white cursor-pointer hover:translate-x-1 transition-transform">Desarrollo de Software</li>
-                <li className="hover:text-white cursor-pointer hover:translate-x-1 transition-transform">Casos de Éxito</li>
-                <li className="hover:text-white cursor-pointer hover:translate-x-1 transition-transform">Área Clientes</li>
+                <li><a href="#servicios" className="hover:text-white transition-colors">Servicios Industriales</a></li>
+                <li><a href="#proyectos" className="hover:text-white transition-colors">Casos de Éxito</a></li>
+                <li><a href="#metodologia" className="hover:text-white transition-colors">Nuestra Metodología</a></li>
+                <li><a href="#" onClick={(e) => {e.preventDefault(); alert('Login Portal');}} className="hover:text-white transition-colors">Área Clientes</a></li>
              </ul>
           </div>
 
@@ -91,6 +95,9 @@ export const Footer: React.FC = () => {
                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                    <span className="text-green-500 font-bold text-sm">OPERACIONAL</span>
                 </div>
+                <p className="text-xs text-metallic-300 mt-2 font-mono">
+                   SLA Actual: 99.98%
+                </p>
              </div>
           </div>
 

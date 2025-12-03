@@ -11,7 +11,7 @@ const steps: ProcessStep[] = [
 
 export const Methodology: React.FC = () => {
   return (
-    <section className="bg-navy-800 py-24 px-6 border-t border-navy-700">
+    <section className="bg-navy-800 py-24 px-6 border-t border-navy-700" id="metodologia">
       <div className="max-w-7xl mx-auto">
         
         <div className="flex flex-col md:flex-row justify-between items-end mb-16">

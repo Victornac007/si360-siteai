@@ -4,6 +4,8 @@ import { Hero } from './components/Hero';
 import { PainPoints } from './components/PainPoints';
 import { Services } from './components/Services';
 import { Methodology } from './components/Methodology';
+import { Projects } from './components/Projects';
+import { About } from './components/About';
 import { Footer } from './components/Footer';
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
         <PainPoints />
         <Services />
         <Methodology />
+        <Projects />
+        <About />
       </main>
       <Footer />
     </div>

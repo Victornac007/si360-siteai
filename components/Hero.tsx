@@ -3,6 +3,13 @@ import { Button } from './Button';
 import { Hexagon, ChevronRight } from 'lucide-react';
 
 export const Hero: React.FC = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contacto');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative w-full min-h-screen flex flex-col md:flex-row overflow-hidden border-b border-navy-700">
       
@@ -56,7 +63,7 @@ export const Hero: React.FC = () => {
         </h2>
 
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
-          <Button>
+          <Button onClick={scrollToContact}>
             Solicitar Diagnóstico Técnico <ChevronRight className="w-4 h-4" />
           </Button>
           <span className="text-metallic-300 text-sm font-mono mt-2 md:mt-0 md:ml-4">
